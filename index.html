@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kila Coffee · Cafetería de especialidad, Ñuñoa</title>
+<!--
+  DATOS REALES verificados en Google Maps e Instagram el 04-09-2026:
+  - Kila Coffee, Román Díaz 2023, 7770287 Ñuñoa, Región Metropolitana.
+  - Google Maps: 4.9★ / 365 opiniones. Place ID real:
+    0x9662cff7dddd3a7d:0x5f35b73bfa6ea8a7 (obtenido vía Compartir → Incorporar un mapa).
+  - Horario real (Google Maps, sección Horario de atención):
+    Martes a viernes 10:00–20:20 · Sábado y domingo 10:00–15:30 y 16:30–20:20 · Lunes cerrado.
+  - Instagram real: @kila_coffee (6077 seguidores al momento de verificar).
+  - Delivery real confirmado: Rappi (rappi.cl/restaurantes/900086595-kila-coffee).
+    No se encontró presencia en Uber Eats ni PedidosYa.
+  - PENDIENTE DE CONFIRMAR: no existe NINGÚN teléfono/WhatsApp registrado en Google Maps
+    ni en Instagram (Maps invita explícitamente a "agregar número de teléfono del lugar").
+    Por eso este sitio NO incluye un botón de WhatsApp inventado — se usa Instagram y Rappi
+    como canales de contacto reales. Si el local confirma un número, agregarlo.
+  - No se encontró cuenta de TikTok.
+  - Fotos: 2 fotos reales rescatadas de la landing page original de una sola página
+    (fotos/patio.jpg y fotos/meson.jpg). Si el local manda más fotos, se pueden sumar
+    en la carpeta fotos/.
+  - Precios de café tomados de la pizarra "Compartir un Café" en la landing original;
+    algunos (Capuccino doble, Mokaccino, Latte doble/grande) tenían texto manuscrito
+    parcialmente ilegible — se transcribieron con la mejor interpretación posible y
+    quedan marcados "(verificar)". Los platos de brunch/almuerzo no tienen precio
+    confirmado (no hay pizarra de precios para comida) — se muestran sin precio inventado.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="loadScreen">
+  <svg viewBox="0 0 60 60" width="52" height="52" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="30" cy="30" r="26" stroke="#C21F2E" stroke-width="3"/>
+    <text x="30" y="38" text-anchor="middle" font-family="Instrument Serif, serif" font-style="italic" font-size="22" fill="#F5EFE2">K</text>
+  </svg>
+</div>
+
+<header id="site-header">
+  <div class="nav-bar">
+    <div class="nav-brand disp">Kila Coffee</div>
+    <nav class="nav-links" id="main-nav">
+      <button class="nav-link active" data-tab="inicio">Inicio</button>
+      <button class="nav-link" data-tab="nosotros">Nosotros</button>
+      <button class="nav-link" data-tab="carta">Carta</button>
+      <button class="nav-link" data-tab="resenas">Reseñas</button>
+      <button class="nav-link" data-tab="visitanos">Visítanos</button>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- ===================== INICIO ===================== -->
+  <section class="tab-panel active" data-tab-panel="inicio">
+    <div class="hero">
+      <img src="fotos/patio.jpg" alt="Patio trasero y terraza de Kila Coffee" class="bg-photo">
+      <div class="hero-inner">
+        <p class="hero-eyebrow mono">Cafetería de especialidad · Ñuñoa</p>
+        <h1>Una casa,<br>no un local de paso.</h1>
+        <p class="lead">Café de especialidad, pan de masa madre y pizzas artesanales en un patio con jardín, en pleno Ñuñoa. Un lugar para quedarse un rato.</p>
+        <div class="hero-pills">
+          <div class="hero-pill">
+            <div class="label mono">Dirección</div>
+            <div class="val">Román Díaz 2023</div>
+          </div>
+          <div class="hero-pill">
+            <div class="label mono">Horario</div>
+            <div class="val"><span class="status-dot" id="statusDot"></span><span id="statusText">Cargando…</span></div>
+          </div>
+          <div class="hero-pill">
+            <div class="label mono">Google</div>
+            <div class="val">4.9 ★ (365 opiniones)</div>
+          </div>
+        </div>
+        <div class="hero-ctas">
+          <button class="btn btn-primary" data-tab="carta">Ver el menú</button>
+          <a class="btn btn-outline-light" href="https://instagram.com/kila_coffee" target="_blank" rel="noopener">Síguenos en Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NOSOTROS ===================== -->
+  <section class="tab-panel" data-tab-panel="nosotros">
+    <div class="section-inner">
+      <p class="eyebrow">Quiénes somos</p>
+      <div class="about-grid reveal">
+        <div class="about-copy">
+          <h2 class="section-title">Café con calma,<br>en un patio de verdad.</h2>
+          <p>Kila Coffee es una cafetería de especialidad en Ñuñoa, un poco escondida pero con mucha personalidad: patio y jardín propios, pan de masa madre horneado ahí mismo, pizzas artesanales y una carta pensada también para quienes buscan opciones veganas.</p>
+          <p>Un lugar ideal tanto para conversar con calma como para trabajar tranquilo — el ambiente relajado es, según sus propios clientes, lo mejor que tiene.</p>
+          <div class="tag-row">
+            <span class="tag">🌱 Opciones veganas</span>
+            <span class="tag">🍕 Pizzas artesanales</span>
+            <span class="tag">🍞 Masa madre</span>
+            <span class="tag">🌳 Patio y jardín</span>
+          </div>
+          <div class="stat-row">
+            <div class="stat"><div class="num">4.9</div><div class="lbl mono">Google Reviews</div></div>
+            <div class="stat"><div class="num">365</div><div class="lbl mono">Opiniones</div></div>
+            <div class="stat"><div class="num">$10–15k</div><div class="lbl mono">Por persona aprox.</div></div>
+          </div>
+        </div>
+        <div class="about-photo">
+          <img src="fotos/patio.jpg" alt="Patio trasero y terraza de Kila Coffee">
+        </div>
+      </div>
+
+      <div class="meson-block reveal">
+        <div class="about-photo">
+          <img src="fotos/meson.jpg" alt="Mesón de Kila Coffee con máquina Sanremo">
+        </div>
+        <div class="meson-copy">
+          <p class="eyebrow">La barra</p>
+          <h2 class="section-title">Se sabe de dónde<br>viene cada taza.</h2>
+          <p style="line-height:1.75; color:rgba(26,24,21,0.8); margin-top:20px;">Detrás del mesón, la máquina Sanremo y el moledor trabajan sin parar para sacar cada espresso, capuccino y latte del día — la misma barra que da nombre y cara al local.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CARTA ===================== -->
+  <section class="tab-panel" data-tab-panel="carta">
+    <div class="section-inner">
+      <div class="menu-header reveal">
+        <div>
+          <p class="eyebrow">La carta</p>
+          <h2 class="section-title">Café, brunch<br>y algo dulce.</h2>
+        </div>
+        <p class="mono" style="color:rgba(26,24,21,0.5); font-size:.85rem;">$10.000–15.000 por persona aprox.</p>
+      </div>
+      <div id="menuTabs" class="menu-tabs reveal"></div>
+      <div id="menuPanels"></div>
+      <div class="highlight-row reveal">
+        <span class="tag">⭐ Populares en Google: Pie de Limón</span>
+        <span class="tag">⭐ Pizza Coppa Rúcula</span>
+        <span class="tag">🌳 Asientos en la terraza</span>
+        <span class="tag">🍵 Muy buena selección de té</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESEÑAS ===================== -->
+  <section class="tab-panel soft" data-tab-panel="resenas">
+    <div class="section-inner">
+      <p class="eyebrow" style="text-align:center;">Lo que dicen</p>
+      <div class="review-summary reveal">
+        <div class="stars">★★★★★</div>
+        <p class="big disp">4.9</p>
+        <p class="mono" style="color:rgba(26,24,21,0.55); text-transform:uppercase; font-size:.8rem;">365 opiniones en Google Maps</p>
+      </div>
+      <div class="reviews-grid reveal">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Agradable lugar, un poco escondido, pero eso le da su onda. El ambiente es lo mejor que tiene, ideal para conversar o trabajar tranquilo. La carta es variada, original y muy tentadora. Comida rica, bien preparada y bien atendido."</p>
+          <div class="review-who">
+            <div class="review-avatar">MC</div>
+            <div>
+              <div class="review-name">Metale Chala</div>
+              <div class="review-when mono">Local Guide · hace 4 meses</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Fuimos a conocer este café y nos encantó. Todo estaba muy rico, desde el café hasta la comida, y se notaba la calidad de los productos. El lugar es muy lindo, acogedor y abrigado, perfecto para pasar un rato agradable. Sin duda volveremos."</p>
+          <div class="review-who">
+            <div class="review-avatar">FV</div>
+            <div>
+              <div class="review-name">Fran Villanueva</div>
+              <div class="review-when mono">Hace 1 mes</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Me encanta Kila Coffee, voy muy seguido con mi marido, mi pequeña hija y nuestro perro. Nos atienden súper bien, el lugar es acogedor y cómodo, la comida exquisita y la música muy de mi gusto. Un buen panorama para pasar el rato en familia."</p>
+          <div class="review-who">
+            <div class="review-avatar">DI</div>
+            <div>
+              <div class="review-name">Daniella Iglesias</div>
+              <div class="review-when mono">Local Guide · hace 2 meses</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <a class="btn btn-outline" href="https://search.google.com/local/writereview?placeid=0x9662cff7dddd3a7d:0x5f35b73bfa6ea8a7" target="_blank" rel="noopener">Déjanos tu reseña en Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VISÍTANOS ===================== -->
+  <section class="tab-panel dark" data-tab-panel="visitanos">
+    <div class="section-inner">
+      <p class="eyebrow">Te esperamos</p>
+      <h2 class="section-title" style="color:var(--crema); margin-bottom:40px;">Román Díaz 2023,<br>Ñuñoa.</h2>
+      <div class="visit-grid">
+        <div class="visit-info">
+          <div class="visit-label">Dirección</div>
+          <p>Román Díaz 2023, 7770287<br>Ñuñoa, Región Metropolitana</p>
+
+          <div class="visit-label">Horario</div>
+          <p id="visitStatusLine">Cargando…</p>
+          <p style="font-size:.9rem; color:rgba(245,239,226,0.75);">Martes a viernes 10:00–20:20<br>Sábado y domingo 10:00–15:30 y 16:30–20:20<br>Lunes cerrado</p>
+
+          <div class="visit-label">Servicios</div>
+          <div class="tag-row">
+            <span class="tag" style="border-color:rgba(245,239,226,0.25); color:var(--crema);">Consumo en el lugar</span>
+            <span class="tag" style="border-color:rgba(245,239,226,0.25); color:var(--crema);">Retiro en la puerta</span>
+            <span class="tag" style="border-color:rgba(245,239,226,0.25); color:var(--crema);">Delivery por Rappi</span>
+          </div>
+
+          <div class="contact-grid">
+            <a class="contact-box" href="https://instagram.com/kila_coffee" target="_blank" rel="noopener">
+              <div class="lbl">Instagram</div>
+              <div class="val">@kila_coffee</div>
+            </a>
+            <a class="contact-box" href="https://www.rappi.cl/restaurantes/900086595-kila-coffee" target="_blank" rel="noopener">
+              <div class="lbl">Rappi</div>
+              <div class="val">Pide a domicilio</div>
+            </a>
+            <a class="contact-box" href="https://www.google.com/maps/dir/?api=1&destination=Kila+Coffee&destination_place_id=0x9662cff7dddd3a7d:0x5f35b73bfa6ea8a7" target="_blank" rel="noopener">
+              <div class="lbl">Google Maps</div>
+              <div class="val">Cómo llegar</div>
+            </a>
+            <a class="contact-box" href="https://waze.com/ul?ll=-33.4499818,-70.6169623&navigate=yes" target="_blank" rel="noopener">
+              <div class="lbl">Waze</div>
+              <div class="val">Ir con Waze</div>
+            </a>
+          </div>
+          <p class="no-phone-note">* No hay número de teléfono ni WhatsApp registrado en Google Maps ni en Instagram — por eso no se muestra un botón de WhatsApp. Instagram es el canal de contacto directo del local.</p>
+        </div>
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.9740809150417!2d-70.6169623!3d-33.4499818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cff7dddd3a7d%3A0x5f35b73bfa6ea8a7!2sKila%20Coffee!5e0!3m2!1ses-419!2scl!4v1788579420944!5m2!1ses-419!2scl" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="brand disp">Kila Coffee</div>
+  <p>Román Díaz 2023, Ñuñoa · <a href="https://instagram.com/kila_coffee" target="_blank" rel="noopener">@kila_coffee</a></p>
+  <p>Sitio demo diseñado con cariño ✨</p>
+</footer>
+
+<a id="floatInstagram" class="float-widget" href="https://instagram.com/kila_coffee" target="_blank" rel="noopener" aria-label="Instagram">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+</a>
+<a id="floatRappi" class="float-widget" href="https://www.rappi.cl/restaurantes/900086595-kila-coffee" target="_blank" rel="noopener" aria-label="Pedir por Rappi">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 10l1.5-5A2 2 0 0 1 6.4 3.5h11.2a2 2 0 0 1 1.9 1.5L21 10"/><path d="M3 10h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-8z"/><line x1="7" y1="14" x2="17" y2="14"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
