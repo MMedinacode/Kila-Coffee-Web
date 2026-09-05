@@ -133,6 +133,9 @@ section{padding:96px 0;}
 
 /* ---------- Ventana de redes sociales ---------- */
 .social-window{margin-top:72px; border-top:1px solid var(--line); padding-top:64px;}
+.ig-handle-link{display:inline-block; transition:color .2s ease, transform .15s ease;}
+.ig-handle-link:hover{color:var(--rojo);}
+.ig-handle-link:active{transform:scale(0.96);}
 .promo-banner{display:grid; grid-template-columns:220px 1fr; gap:28px; align-items:center; background:var(--negro); border-radius:8px; padding:20px; margin-bottom:32px;}
 .promo-banner img{width:100%; height:100%; border-radius:6px; object-fit:cover; aspect-ratio:9/16;}
 .promo-tag{font-family:'JetBrains Mono',monospace; font-size:.65rem; text-transform:uppercase; letter-spacing:.1em; color:var(--rojo); margin-bottom:10px;}
