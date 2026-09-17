@@ -49,11 +49,13 @@ const CATEGORIES = [
 const MENU = {
   cafe: {
     items: [
-      { n: 'Espresso', d: 'Simple o doble.', p: 2200, note: 'Doble $2.500' },
-      { n: 'Americano', d: 'Chico o grande.', p: 2500, note: 'Grande $2.900' },
-      { n: 'Capuccino', d: 'Espresso, leche vaporizada y espuma.', p: 2900, note: 'Doble $3.200 (verificar)' },
-      { n: 'Mokaccino', d: 'Espresso, chocolate y leche vaporizada.', p: 3900, note: 'Ristretto doble $2.200 (verificar)' },
-      { n: 'Latte', d: 'Chico o grande.', p: 3500, note: 'Grande $4.000 · Doble $3.900 (verificar)' },
+      { n: 'Espresso', d: 'Carga simple.', p: 2200 },
+      { n: 'Espresso doble', d: 'Carga doble.', p: 2500 },
+      { n: 'Americano', d: 'Tamaño chico.', p: 2500 },
+      { n: 'Americano grande', d: 'Tamaño grande.', p: 2900 },
+      { n: 'Capuccino', d: 'Espresso, leche vaporizada y espuma.', p: 2900 },
+      { n: 'Mokaccino', d: 'Espresso, chocolate y leche vaporizada.', p: 3900 },
+      { n: 'Latte', d: 'Espresso y leche vaporizada.', p: 3500 },
       { n: 'Chocolate caliente', d: 'Chocolate caliente clásico.', p: 3900 },
       { n: 'Té e infusiones', d: 'Selección de té e infusiones.', p: 2500 },
     ]
@@ -61,10 +63,10 @@ const MENU = {
   pizzas: {
     photo: 'fotos/pizza-coppa-rucula.jpg',
     items: [
-      { n: 'Pizza Coppa Rúcula', d: 'Jamón serrano, rúcula y queso — uno de los platos más pedidos según Google Maps.', p: null },
+      { n: 'Pizza Coppa Rúcula', d: 'Jamón serrano, rúcula y queso — uno de los más pedidos.', p: null },
       { n: 'Pizza mozzarella y albahaca', d: 'Salsa de tomate, mozzarella y albahaca fresca.', p: null },
     ],
-    note: 'No hay una pizarra de precios para las pizzas — consultar directamente en el local. Todos los viernes desde las 16:30 hrs hay 30% de descuento en pizza pepperoni (consumo en el local), según su propia Instagram.'
+    note: 'Los precios de las pizzas se consultan en el local. Todos los viernes desde las 16:30 hay 30% de descuento en pizza pepperoni, para consumo en el local.'
   },
   dulces: {
     photo: 'fotos/vitrina.jpg',
@@ -72,7 +74,7 @@ const MENU = {
       { n: 'Cookies (3 unidades)', d: 'De la vitrina.', p: 1500 },
       { n: 'Pastelería del día', d: 'Selección de la vitrina, cambia día a día.', p: 1500 },
     ],
-    note: 'Precios tomados directamente de las etiquetas de la vitrina — la selección varía según el día.'
+    note: 'La selección de la vitrina varía según el día.'
   },
   brunch: {
     items: [
@@ -81,7 +83,7 @@ const MENU = {
       { n: 'Postre de la casa', d: 'Selección de postres, según disponibilidad del día.', p: null },
       { n: 'Menú de almuerzo', d: 'Disponible de martes a viernes, 13:00 a 15:00 hrs.', p: null },
     ],
-    note: 'No existe una pizarra de precios para los platos de comida — precios a confirmar directamente en el local.'
+    note: 'Los precios de los platos se consultan en el local.'
   }
 };
 

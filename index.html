@@ -57,6 +57,38 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="pulido.css">
+
+<!-- ══════════════════════════════════════════════════════════════
+     Datos estructurados (schema.org)
+     ══════════════════════════════════════════════════════════════
+     Esto no se ve en la página: lo lee Google. Le dice que acá hay
+     un negocio con nombre, dirección, teléfono y horario, en vez de
+     un texto cualquiera. Es lo que permite salir como ficha y no
+     sólo como un resultado más.
+
+     Todo lo de abajo ya está publicado en esta misma página. Si un
+     dato no estaba, el campo simplemente no aparece. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Kila Coffee",
+  "description": "Kila Coffee. Una casa, no un local de paso. 4.9★ con 365 opiniones en Google.",
+  "image": "https://mmedinacode.github.io/Kila-Coffee-Web/fotos/patio.jpg",
+  "url": "https://mmedinacode.github.io/Kila-Coffee-Web/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Román Díaz 2023",
+    "addressLocality": "Ñuñoa",
+    "addressRegion": "Región Metropolitana",
+    "addressCountry": "CL"
+  },
+  "sameAs": [
+    "https://instagram.com/kila_coffee"
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -292,7 +324,7 @@
               <div class="val">Ir con Waze</div>
             </a>
           </div>
-          <p class="no-phone-note">* No hay número de teléfono ni WhatsApp registrado en Google Maps ni en Instagram — por eso no se muestra un botón de WhatsApp. Instagram es el canal de contacto directo del local.</p>
+          
         </div>
         <div class="map-wrap">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.9740809150417!2d-70.6169623!3d-33.4499818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cff7dddd3a7d%3A0x5f35b73bfa6ea8a7!2sKila%20Coffee!5e0!3m2!1ses-419!2scl!4v1788579420944!5m2!1ses-419!2scl" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -323,5 +355,7 @@
 <script>window.REDES={"intro": "Instagram es su único canal: no tienen teléfono ni WhatsApp publicados en ninguna parte.", "instagram": {"user": "kila_coffee", "fotos": ["fotos/bowl-palta-huevo.jpg", "fotos/patio-cubierto.jpg", "fotos/fachada.jpg"]}};</script>
 <script src="redes.js"></script>
 <script src="flotantes.js"></script>
+<script src="vida.js"></script>
+<script src="pulido.js"></script>
 </body>
 </html>
