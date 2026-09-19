@@ -39,10 +39,11 @@
   - Instagram real: @kila_coffee (6077 seguidores al momento de verificar).
   - Delivery real confirmado: Rappi (rappi.cl/restaurantes/900086595-kila-coffee).
     No se encontró presencia en Uber Eats ni PedidosYa.
-  - PENDIENTE DE CONFIRMAR: no existe NINGÚN teléfono/WhatsApp registrado en Google Maps
-    ni en Instagram (Maps invita explícitamente a "agregar número de teléfono del lugar").
-    Por eso este sitio NO incluye un botón de WhatsApp inventado — se usa Instagram y Rappi
-    como canales de contacto reales. Si el local confirma un número, agregarlo.
+  - WHATSAPP ENCONTRADO EL 18-09-2026: +56 9 9909 1016.
+    No estaba como "teléfono" en la ficha, por eso no aparecía antes. Está escondido en el
+    botón "Buscar mesa" de su ficha de Google, que apunta a un tinyurl (tinyurl.com/mrx3f8hu)
+    y ése redirige a api.whatsapp.com/send?phone=56999091016. Lo publican ellos.
+    Comprobado siguiendo la redirección, no deducido.
   - No se encontró cuenta de TikTok.
   - Fotos: 2 fotos reales rescatadas de la landing page original de una sola página
     (fotos/patio.jpg y fotos/meson.jpg). Si el local manda más fotos, se pueden sumar
@@ -307,6 +308,10 @@
           </div>
 
           <div class="contact-grid">
+            <a class="contact-box" href="https://wa.me/56999091016" target="_blank" rel="noopener">
+              <div class="lbl">WhatsApp</div>
+              <div class="val">+56 9 9909 1016</div>
+            </a>
             <a class="contact-box" href="https://instagram.com/kila_coffee" target="_blank" rel="noopener">
               <div class="lbl">Instagram</div>
               <div class="val">@kila_coffee</div>
@@ -341,6 +346,11 @@
   <p>Sitio demo diseñado con cariño ✨</p>
 </footer>
 
+<!-- WhatsApp primero: es por donde de verdad escribe la gente, y es el número
+     que ellos mismos publican en el botón de reservas de su ficha. -->
+<a id="floatWhatsapp" class="float-widget" href="https://wa.me/56999091016" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
 <a id="floatInstagram" class="float-widget" href="https://instagram.com/kila_coffee" target="_blank" rel="noopener" aria-label="Instagram">
   <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
 </a>
@@ -352,7 +362,8 @@
 <script src="carta-fotos.js"></script>
 <script src="carrito.js"></script>
 <!-- Redes sociales REALES del local, verificadas una por una. El modulo redes.js arma con esto la pestana Redes. -->
-<script>window.REDES={"intro": "Instagram es su único canal: no tienen teléfono ni WhatsApp publicados en ninguna parte.", "instagram": {"user": "kila_coffee", "fotos": ["fotos/bowl-palta-huevo.jpg", "fotos/patio-cubierto.jpg", "fotos/fachada.jpg"]},
+<script>window.REDES={"intro": "Instagram es nuestro canal del día a día.", "whatsapp": {"numero": "56999091016", "nota": "El mismo que publican en el botón de reservas de su ficha de Google."},
+  "instagram": {"user": "kila_coffee", "fotos": ["fotos/bowl-palta-huevo.jpg", "fotos/patio-cubierto.jpg", "fotos/fachada.jpg"]},
   /* Ficha de Google. El cid sale del place id hexadecimal que esta
      misma página ya guarda en su enlace de reseñas. */
   google: {
